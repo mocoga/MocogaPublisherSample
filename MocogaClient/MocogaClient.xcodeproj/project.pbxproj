@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF93B07515E79ED900939C37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B07415E79ED900939C37 /* UIKit.framework */; };
+		BF93B07715E79EDA00939C37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B07615E79ED900939C37 /* Foundation.framework */; };
+		BF93B07915E79EDA00939C37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B07815E79EDA00939C37 /* CoreGraphics.framework */; };
+		BF93B07F15E79EDA00939C37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF93B07D15E79EDA00939C37 /* InfoPlist.strings */; };
+		BF93B08115E79EDA00939C37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B08015E79EDA00939C37 /* main.m */; };
+		BF93B08515E79EDA00939C37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B08415E79EDA00939C37 /* AppDelegate.m */; };
+		BF93B08815E79EDA00939C37 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B08715E79EDA00939C37 /* FirstViewController.m */; };
+		BF93B08A15E79EDA00939C37 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B08915E79EDA00939C37 /* first.png */; };
+		BF93B08C15E79EDA00939C37 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B08B15E79EDA00939C37 /* first@2x.png */; };
+		BF93B08F15E79EDA00939C37 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B08E15E79EDA00939C37 /* SecondViewController.m */; };
+		BF93B09115E79EDA00939C37 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B09015E79EDA00939C37 /* second.png */; };
+		BF93B09315E79EDA00939C37 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B09215E79EDA00939C37 /* second@2x.png */; };
+		BF93B09615E79EDA00939C37 /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF93B09415E79EDA00939C37 /* FirstViewController_iPhone.xib */; };
+		BF93B09915E79EDA00939C37 /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF93B09715E79EDA00939C37 /* FirstViewController_iPad.xib */; };
+		BF93B09C15E79EDA00939C37 /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF93B09A15E79EDA00939C37 /* SecondViewController_iPhone.xib */; };
+		BF93B09F15E79EDA00939C37 /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF93B09D15E79EDA00939C37 /* SecondViewController_iPad.xib */; };
+		BF93B0AE15E79F2D00939C37 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B0AB15E79F2D00939C37 /* CoreTelephony.framework */; };
+		BF93B0AF15E79F2D00939C37 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B0AC15E79F2D00939C37 /* MediaPlayer.framework */; };
+		BF93B0B015E79F2D00939C37 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B0AD15E79F2D00939C37 /* SystemConfiguration.framework */; };
+		BF93B0B215E79FA900939C37 /* MocogaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B0B115E79FA900939C37 /* MocogaSDK.framework */; };
+		BF93B0B415E79FAD00939C37 /* Mocoga.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF93B0B315E79FAD00939C37 /* Mocoga.bundle */; };
+		BF93B0BF15E7ADFA00939C37 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B0BD15E7ADFA00939C37 /* Icon.png */; };
+		BF93B0C015E7ADFA00939C37 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B0BE15E7ADFA00939C37 /* Icon@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BF93B07015E79ED900939C37 /* MocogaClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MocogaClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF93B07415E79ED900939C37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BF93B07615E79ED900939C37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BF93B07815E79EDA00939C37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BF93B07C15E79EDA00939C37 /* MocogaClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MocogaClient-Info.plist"; sourceTree = "<group>"; };
+		BF93B07E15E79EDA00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF93B08015E79EDA00939C37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF93B08215E79EDA00939C37 /* MocogaClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MocogaClient-Prefix.pch"; sourceTree = "<group>"; };
+		BF93B08315E79EDA00939C37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF93B08415E79EDA00939C37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF93B08615E79EDA00939C37 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		BF93B08715E79EDA00939C37 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		BF93B08915E79EDA00939C37 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		BF93B08B15E79EDA00939C37 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		BF93B08D15E79EDA00939C37 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		BF93B08E15E79EDA00939C37 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		BF93B09015E79EDA00939C37 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		BF93B09215E79EDA00939C37 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		BF93B09515E79EDA00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
+		BF93B09815E79EDA00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
+		BF93B09B15E79EDA00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
+		BF93B09E15E79EDA00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
+		BF93B0AB15E79F2D00939C37 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		BF93B0AC15E79F2D00939C37 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BF93B0AD15E79F2D00939C37 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BF93B0B115E79FA900939C37 /* MocogaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MocogaSDK.framework; path = ../Resources/MocogaSDK.framework; sourceTree = "<group>"; };
+		BF93B0B315E79FAD00939C37 /* Mocoga.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Mocoga.bundle; path = ../../Resources/Mocoga.bundle; sourceTree = "<group>"; };
+		BF93B0BD15E7ADFA00939C37 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Resources/Icon.png; sourceTree = "<group>"; };
+		BF93B0BE15E7ADFA00939C37 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Resources/Icon@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF93B06D15E79ED900939C37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF93B0AE15E79F2D00939C37 /* CoreTelephony.framework in Frameworks */,
+				BF93B0AF15E79F2D00939C37 /* MediaPlayer.framework in Frameworks */,
+				BF93B0B015E79F2D00939C37 /* SystemConfiguration.framework in Frameworks */,
+				BF93B07515E79ED900939C37 /* UIKit.framework in Frameworks */,
+				BF93B07715E79EDA00939C37 /* Foundation.framework in Frameworks */,
+				BF93B07915E79EDA00939C37 /* CoreGraphics.framework in Frameworks */,
+				BF93B0B215E79FA900939C37 /* MocogaSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF93B06515E79ED900939C37 = {
+			isa = PBXGroup;
+			children = (
+				BF93B07A15E79EDA00939C37 /* MocogaClient */,
+				BF93B07315E79ED900939C37 /* Frameworks */,
+				BF93B07115E79ED900939C37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF93B07115E79ED900939C37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF93B07015E79ED900939C37 /* MocogaClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF93B07315E79ED900939C37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF93B0B115E79FA900939C37 /* MocogaSDK.framework */,
+				BF93B0AB15E79F2D00939C37 /* CoreTelephony.framework */,
+				BF93B0AC15E79F2D00939C37 /* MediaPlayer.framework */,
+				BF93B0AD15E79F2D00939C37 /* SystemConfiguration.framework */,
+				BF93B07415E79ED900939C37 /* UIKit.framework */,
+				BF93B07615E79ED900939C37 /* Foundation.framework */,
+				BF93B07815E79EDA00939C37 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF93B07A15E79EDA00939C37 /* MocogaClient */ = {
+			isa = PBXGroup;
+			children = (
+				BF93B08315E79EDA00939C37 /* AppDelegate.h */,
+				BF93B08415E79EDA00939C37 /* AppDelegate.m */,
+				BF93B08615E79EDA00939C37 /* FirstViewController.h */,
+				BF93B08715E79EDA00939C37 /* FirstViewController.m */,
+				BF93B08915E79EDA00939C37 /* first.png */,
+				BF93B08B15E79EDA00939C37 /* first@2x.png */,
+				BF93B08D15E79EDA00939C37 /* SecondViewController.h */,
+				BF93B08E15E79EDA00939C37 /* SecondViewController.m */,
+				BF93B09015E79EDA00939C37 /* second.png */,
+				BF93B09215E79EDA00939C37 /* second@2x.png */,
+				BF93B09415E79EDA00939C37 /* FirstViewController_iPhone.xib */,
+				BF93B09715E79EDA00939C37 /* FirstViewController_iPad.xib */,
+				BF93B09A15E79EDA00939C37 /* SecondViewController_iPhone.xib */,
+				BF93B09D15E79EDA00939C37 /* SecondViewController_iPad.xib */,
+				BF93B07B15E79EDA00939C37 /* Supporting Files */,
+			);
+			path = MocogaClient;
+			sourceTree = "<group>";
+		};
+		BF93B07B15E79EDA00939C37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF93B0BD15E7ADFA00939C37 /* Icon.png */,
+				BF93B0BE15E7ADFA00939C37 /* Icon@2x.png */,
+				BF93B0B315E79FAD00939C37 /* Mocoga.bundle */,
+				BF93B07C15E79EDA00939C37 /* MocogaClient-Info.plist */,
+				BF93B07D15E79EDA00939C37 /* InfoPlist.strings */,
+				BF93B08015E79EDA00939C37 /* main.m */,
+				BF93B08215E79EDA00939C37 /* MocogaClient-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF93B06F15E79ED900939C37 /* MocogaClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF93B0A215E79EDA00939C37 /* Build configuration list for PBXNativeTarget "MocogaClient" */;
+			buildPhases = (
+				BF93B06C15E79ED900939C37 /* Sources */,
+				BF93B06D15E79ED900939C37 /* Frameworks */,
+				BF93B06E15E79ED900939C37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MocogaClient;
+			productName = MocogaClient;
+			productReference = BF93B07015E79ED900939C37 /* MocogaClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF93B06715E79ED900939C37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = Mocoga;
+			};
+			buildConfigurationList = BF93B06A15E79ED900939C37 /* Build configuration list for PBXProject "MocogaClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BF93B06515E79ED900939C37;
+			productRefGroup = BF93B07115E79ED900939C37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF93B06F15E79ED900939C37 /* MocogaClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF93B06E15E79ED900939C37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF93B07F15E79EDA00939C37 /* InfoPlist.strings in Resources */,
+				BF93B08A15E79EDA00939C37 /* first.png in Resources */,
+				BF93B08C15E79EDA00939C37 /* first@2x.png in Resources */,
+				BF93B09115E79EDA00939C37 /* second.png in Resources */,
+				BF93B09315E79EDA00939C37 /* second@2x.png in Resources */,
+				BF93B09615E79EDA00939C37 /* FirstViewController_iPhone.xib in Resources */,
+				BF93B09915E79EDA00939C37 /* FirstViewController_iPad.xib in Resources */,
+				BF93B09C15E79EDA00939C37 /* SecondViewController_iPhone.xib in Resources */,
+				BF93B09F15E79EDA00939C37 /* SecondViewController_iPad.xib in Resources */,
+				BF93B0B415E79FAD00939C37 /* Mocoga.bundle in Resources */,
+				BF93B0BF15E7ADFA00939C37 /* Icon.png in Resources */,
+				BF93B0C015E7ADFA00939C37 /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF93B06C15E79ED900939C37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF93B08115E79EDA00939C37 /* main.m in Sources */,
+				BF93B08515E79EDA00939C37 /* AppDelegate.m in Sources */,
+				BF93B08815E79EDA00939C37 /* FirstViewController.m in Sources */,
+				BF93B08F15E79EDA00939C37 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF93B07D15E79EDA00939C37 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF93B07E15E79EDA00939C37 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BF93B09415E79EDA00939C37 /* FirstViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF93B09515E79EDA00939C37 /* en */,
+			);
+			name = FirstViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		BF93B09715E79EDA00939C37 /* FirstViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF93B09815E79EDA00939C37 /* en */,
+			);
+			name = FirstViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		BF93B09A15E79EDA00939C37 /* SecondViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF93B09B15E79EDA00939C37 /* en */,
+			);
+			name = SecondViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		BF93B09D15E79EDA00939C37 /* SecondViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF93B09E15E79EDA00939C37 /* en */,
+			);
+			name = SecondViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF93B0A015E79EDA00939C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF93B0A115E79EDA00939C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF93B0A315E79EDA00939C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Resources\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MocogaClient/MocogaClient-Prefix.pch";
+				INFOPLIST_FILE = "MocogaClient/MocogaClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BF93B0A415E79EDA00939C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Resources\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MocogaClient/MocogaClient-Prefix.pch";
+				INFOPLIST_FILE = "MocogaClient/MocogaClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF93B06A15E79ED900939C37 /* Build configuration list for PBXProject "MocogaClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF93B0A015E79EDA00939C37 /* Debug */,
+				BF93B0A115E79EDA00939C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF93B0A215E79EDA00939C37 /* Build configuration list for PBXNativeTarget "MocogaClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF93B0A315E79EDA00939C37 /* Debug */,
+				BF93B0A415E79EDA00939C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF93B06715E79ED900939C37 /* Project object */;
+}
