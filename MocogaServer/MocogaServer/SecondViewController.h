@@ -10,10 +10,4 @@
 
 @interface SecondViewController : UIViewController
 
-@property (retain, nonatomic) NSMutableData *pointData;
-@property (retain, nonatomic) NSURLConnection *pointConnection;
-
-@property (retain, nonatomic) IBOutlet UILabel *rewardPointLabel;
-@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *rewardPointIndicator;
-
 @end

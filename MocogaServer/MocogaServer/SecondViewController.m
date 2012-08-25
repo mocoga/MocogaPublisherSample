@@ -17,28 +17,11 @@
  */
 #import <MocogaSDK/Mocoga.h>
 
-@interface SecondViewController (SampleRewardServerMethods)
-- (void)getPointFromSampleGameServer;
-@end
+@interface SecondViewController ()
 
-@interface SecondViewController (SampleRewardServerConnections)
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
-@end
-
-@interface SecondViewController (SampleRewardServerNotifications)
-- (void)foregroundNotificationReceived:(NSNotification *)notification;
-- (void)updatedPointsNotificationReceived:(NSNotification *)notification;
 @end
 
 @implementation SecondViewController
-
-@synthesize pointData;
-@synthesize pointConnection;
-@synthesize rewardPointLabel;
-@synthesize rewardPointIndicator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,38 +37,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	
-	/*
-	 * << User ID 설정 >>
-	 *
-	 * - Mocoga에서 보상을 지급할 때, 어느 사용자에게 보상을 지급해야 하는지를 전달하기 위해서는
-	 *   퍼블리셔에서 관리하는 사용자 ID, 즉 보상지급의 대상이 되는 User ID 설정을 해야 합니다.
-	 * - OfferCon을 노출하기 전, 즉 showOfferConAtPoint 메소드를 호출하기 이전에 setUserID 메소드를 통해 User ID를 설정해야 합니다.
-	 * - 설정한 User ID 는 보상지급 서버 URL 호출시 user_id 로 전달됩니다.
-	 * - User ID가 설정이 되어 있지 않으면, 보상을 지급할 사용자를 알 수 없으므로 OfferCon이 표시되지 않습니다.
-	 * - 주의! 테스트 앱에서는 편의를 위하여 UDID를 사용하였습니다. 실제 사용시에는 실제 User ID를 입력해주시기 바랍니다.
-	 */
-	[[Mocoga shared] setUserID:[UIDevice currentDevice].uniqueIdentifier];
-	
-	[[NSNotificationCenter defaultCenter] removeObserver:self
-													name:UIApplicationWillEnterForegroundNotification
-												  object:nil];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-													name:@"SAMPLEPUBLISHER_NOTI_UPDATED_POINTS"
-												  object:nil];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(foregroundNotificationReceived:)
-                                                 name:UIApplicationWillEnterForegroundNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(updatedPointsNotificationReceived:)
-                                                 name:@"SAMPLEPUBLISHER_NOTI_UPDATED_POINTS"
-                                               object:nil];
-	
-	[self getPointFromSampleGameServer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,20 +47,6 @@
 
 - (void)dealloc
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self
-													name:UIApplicationWillEnterForegroundNotification
-												  object:nil];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-													name:@"SAMPLEPUBLISHER_NOTI_UPDATED_POINTS"
-												  object:nil];
-	
-    [pointData release];
-	[pointConnection cancel];
-	[pointConnection release];
-	[rewardPointLabel release];
-	[rewardPointIndicator release];
-	
     [super dealloc];
 }
 
@@ -145,16 +82,28 @@
 	 *     (e.g. willAnimateRotationToInterfaceOrientation가 불릴 때)
 	 *   : showOfferConAtPoint:size:autoresizingMask 메소드를 사용하여 화면 회전에 자동 대응될 수 있도록 구현하실 수 있습니다.
 	 */
+	
+	CGPoint offerConPoint = CGPointZero;
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-		[[Mocoga shared] showOfferConAtPoint:CGPointMake(260.f, 350.f)
-										size:MocogaOfferConSizeNormal
-							autoresizingMask:(UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin)];
+		if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
+			offerConPoint = CGPointMake(250.f, 350.f);
+		}
+		else {
+			offerConPoint = CGPointMake(350.f, 150.f);
+		}
 	}
 	else {
-		[[Mocoga shared] showOfferConAtPoint:CGPointMake(500.f, 650.f)
-										size:MocogaOfferConSizeNormal
-							autoresizingMask:(UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin)];
+		if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
+			offerConPoint = CGPointMake(500.f, 750.f);
+		}
+		else {
+			offerConPoint = CGPointMake(850.f, 600.f);
+		}
 	}
+
+	[[Mocoga shared] showOfferConAtPoint:offerConPoint
+									size:MocogaOfferConSizeNormal
+						autoresizingMask:(UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -169,81 +118,6 @@
 }
 
 - (void)viewDidUnload {
-	[self setRewardPointLabel:nil];
-	[self setRewardPointIndicator:nil];
 	[super viewDidUnload];
 }
-@end
-
-@implementation SecondViewController (SampleRewardServerMethods)
-
-#pragma mark -
-#pragma mark Sample reward server
-- (void)getPointFromSampleGameServer {
-    NSString *requestString = [NSString stringWithFormat:@"http://sample-reward.mocoga.com/get_currency?user_id=%@", [[Mocoga shared] getUserID]];
-	NSURL *pointURL = [NSURL URLWithString:requestString];
-	NSMutableURLRequest *pointRequest = [NSMutableURLRequest requestWithURL:pointURL
-                                                                cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
-                                                            timeoutInterval:30];
-	
-	if (self.pointConnection) {
-		[self.pointConnection cancel];
-		self.pointConnection = nil;
-	}
-	
-	self.pointConnection = [NSURLConnection connectionWithRequest:pointRequest delegate:self];
-	[self.rewardPointIndicator startAnimating];
-}
-
-@end
-
-@implementation SecondViewController (SampleRewardServerConnections)
-
-#pragma mark -
-#pragma mark Delegate methods for sample reward server
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-    if (self.pointData == nil) {
-		self.pointData = [NSMutableData data];
-	}
-    
-    [self.pointData setLength:0];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-    [self.pointData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-	[self.rewardPointIndicator stopAnimating];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	[self.rewardPointIndicator stopAnimating];
-	
-	NSString *result = [[[NSString alloc] initWithBytes:[pointData bytes] length:[pointData length] encoding:NSUTF8StringEncoding] autorelease];
-	NSDictionary *jsonDic = [result objectFromJSONString];
-	
-	if (jsonDic) {
-        NSInteger point = [[jsonDic objectForKey:@"point"] intValue];
-		self.rewardPointLabel.text = [NSString stringWithFormat:@"%d Point", point];
-    }
-}
-
-@end
-
-@implementation SecondViewController (SampleRewardServerNotifications)
-
-#pragma mark -
-#pragma mark Notification Methods
-
-- (void)foregroundNotificationReceived:(NSNotification *)notification {
-    [self getPointFromSampleGameServer];
-}
-
-- (void)updatedPointsNotificationReceived:(NSNotification *)notification {
-    [self getPointFromSampleGameServer];
-}
-
 @end

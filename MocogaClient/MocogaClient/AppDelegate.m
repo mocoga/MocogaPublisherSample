@@ -19,6 +19,10 @@
  */
 #import <MocogaSDK/Mocoga.h>
 
+@interface AppDelegate (GamePointMethods)
+- (NSUInteger)addPointFromClient:(NSUInteger)addedPoints;
+@end
+
 @interface AppDelegate (MocogaDelegate)
 - (void)mocogaWillShowOfferView;
 - (void)mocogaDidHideOfferView;
@@ -109,6 +113,21 @@
 
 @end
 
+@implementation AppDelegate (GamePointMethods)
+
+#pragma mark -
+#pragma mark Game Points for Client
+- (NSUInteger)addPointFromClient:(NSUInteger)addedPoints {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSUInteger points = [prefs integerForKey:@"GamePointsFromClient"];
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:(points + addedPoints) forKey:@"GamePointsFromClient"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    return (points + addedPoints);
+}
+
+@end
+
 @implementation AppDelegate (MocogaDelegate)
 
 #pragma mark -
@@ -127,6 +146,13 @@
     // 사용자에게 reward_amount 에 해당하는 보상을 지급합니다.
     // 가상화폐 UI 를 업데이트합니다.
 	NSLog(@"<< MocogaDelegate >> mocogaRequestsToGiveReward called");
+	
+	NSString *rewardAmount = [rewardInfo objectForKey:@"reward_amount"];
+    [self addPointFromClient:[rewardAmount integerValue]];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SAMPLEPUBLISHER_NOTI_UPDATED_POINTS"
+                                                        object:self
+                                                      userInfo:nil];
     
     [[Mocoga shared] didGiveReward:rewardTransId];
 }

@@ -19,7 +19,16 @@
 
 @end
 
+@interface FirstViewController (NSNotificationMethods)
+- (void)rewardPointIndicatorStartAnimatingNotification:(NSNotification *)notification;
+- (void)rewardPointIndicatorStopAnimatingNotification:(NSNotification *)notification;
+- (void)rewardPointDidUpdateNotification:(NSNotification *)notification;
+@end
+
 @implementation FirstViewController
+
+@synthesize rewardPointLabel;
+@synthesize rewardPointIndicator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +36,21 @@
     if (self) {
 		self.title = NSLocalizedString(@"First", @"First");
 		self.tabBarItem.image = [UIImage imageNamed:@"first"];
+		
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(rewardPointIndicatorStartAnimatingNotification:)
+													 name:@"REWARD_POINT_INDICATOR_STARTANIMATING"
+												   object:nil];
+		
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(rewardPointIndicatorStopAnimatingNotification:)
+													 name:@"REWARD_POINT_INDICATOR_STOPANIMATING"
+												   object:nil];
+		
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(rewardPointDidUpdateNotification:)
+													 name:@"REWARD_POINT_DIDUPDATE"
+												   object:nil];
     }
     return self;
 }
@@ -39,6 +63,8 @@
 
 - (void)viewDidUnload
 {
+	[self setRewardPointLabel:nil];
+	[self setRewardPointIndicator:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -75,7 +101,7 @@
 	 *     (e.g. willAnimateRotationToInterfaceOrientation가 불릴 때)
 	 *   : showOfferConAtPoint:size:autoresizingMask 메소드를 사용하여 화면 회전에 자동 대응될 수 있도록 구현하실 수 있습니다.
 	 */
-	[[Mocoga shared] showOfferConAtPoint:CGPointMake(30.f, 60.f)
+	[[Mocoga shared] showOfferConAtPoint:CGPointMake(10.f, 60.f)
 									size:MocogaOfferConSizeLarge
 						autoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin)];
 }
@@ -92,7 +118,45 @@
 }
 
 - (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:@"REWARD_POINT_INDICATOR_STARTANIMATING"
+												  object:nil];
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:@"REWARD_POINT_INDICATOR_STOPANIMATING"
+												  object:nil];
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:@"REWARD_POINT_DIDUPDATE"
+												  object:nil];
+	
+	[rewardPointLabel release];
+	[rewardPointIndicator release];
+	
 	[super dealloc];
+}
+
+@end
+
+@implementation FirstViewController (NSNotificationMethods)
+
+- (void)rewardPointIndicatorStartAnimatingNotification:(NSNotification *)notification {
+	[self.rewardPointIndicator startAnimating];
+}
+
+- (void)rewardPointIndicatorStopAnimatingNotification:(NSNotification *)notification {
+	[self.rewardPointIndicator stopAnimating];
+}
+
+- (void)rewardPointDidUpdateNotification:(NSNotification *)notification {
+	NSDictionary *userInfo = notification.userInfo;
+	if (userInfo != nil) {
+		NSDictionary *result = (NSDictionary *)[userInfo objectForKey:@"result"];
+		if (result != nil) {
+			NSInteger point = [[result objectForKey:@"point"] intValue];
+			self.rewardPointLabel.text = [NSString stringWithFormat:@"%d Point", point];
+		}
+	}
 }
 
 @end

@@ -10,4 +10,7 @@
 
 @interface FirstViewController : UIViewController
 
+@property (retain, nonatomic) IBOutlet UILabel *rewardPointLabel;
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *rewardPointIndicator;
+
 @end

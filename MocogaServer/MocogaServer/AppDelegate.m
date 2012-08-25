@@ -12,6 +12,8 @@
 
 #import "SecondViewController.h"
 
+#import "JSONKit.h"
+
 /*
  * << 헤더 파일 추가 >>
  *
@@ -19,21 +21,58 @@
  */
 #import <MocogaSDK/Mocoga.h>
 
+@interface AppDelegate ()
+
+@property (retain, nonatomic) NSMutableData *pointData;
+@property (retain, nonatomic) NSURLConnection *pointConnection;
+
+@end
+
 @interface AppDelegate (MocogaDelegate)
 - (void)mocogaUpdateCurrency;
 - (void)mocogaWillShowOfferView;
 - (void)mocogaDidHideOfferView;
 @end
 
+@interface AppDelegate (SampleRewardServerMethods)
+- (void)getPointFromSampleGameServer;
+@end
+
+@interface AppDelegate (SampleRewardServerConnections)
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
+@end
+
+@interface AppDelegate (SampleRewardServerNotifications)
+- (void)foregroundNotificationReceived:(NSNotification *)notification;
+- (void)updatedPointsNotificationReceived:(NSNotification *)notification;
+@end
+
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
+@synthesize pointData;
+@synthesize pointConnection;
 
 - (void)dealloc
 {
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:UIApplicationWillEnterForegroundNotification
+												  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+													name:@"SAMPLEPUBLISHER_NOTI_UPDATED_POINTS"
+												  object:nil];
+	
 	[_window release];
 	[_tabBarController release];
+	[pointData release];
+	[pointConnection cancel];
+	[pointConnection release];
+	
     [super dealloc];
 }
 
@@ -61,10 +100,33 @@
 	
 	self.tabBarController = [[[UITabBarController alloc] init] autorelease];
 	self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
-	self.tabBarController.selectedIndex = 1;
 	
 	self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
+	
+	/*
+	 * << User ID 설정 >>
+	 *
+	 * - Mocoga에서 보상을 지급할 때, 어느 사용자에게 보상을 지급해야 하는지를 전달하기 위해서는
+	 *   퍼블리셔에서 관리하는 사용자 ID, 즉 보상지급의 대상이 되는 User ID 설정을 해야 합니다.
+	 * - OfferCon을 노출하기 전, 즉 showOfferConAtPoint 메소드를 호출하기 이전에 setUserID 메소드를 통해 User ID를 설정해야 합니다.
+	 * - 설정한 User ID 는 보상지급 서버 URL 호출시 user_id 로 전달됩니다.
+	 * - User ID가 설정이 되어 있지 않으면, 보상을 지급할 사용자를 알 수 없으므로 OfferCon이 표시되지 않습니다.
+	 * - 주의! 테스트 앱에서는 편의를 위하여 UDID를 사용하였습니다. 실제 사용시에는 실제 User ID를 입력해주시기 바랍니다.
+	 */
+	[[Mocoga shared] setUserID:[UIDevice currentDevice].uniqueIdentifier];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(foregroundNotificationReceived:)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updatedPointsNotificationReceived:)
+                                                 name:@"SAMPLEPUBLISHER_NOTI_UPDATED_POINTS"
+                                               object:nil];
+	
+	[self getPointFromSampleGameServer];
 	
     return YES;
 }
@@ -128,9 +190,9 @@
 	// 서버로부터 업데이트된 가상화폐를 얻어 UI 를 갱신합니다.
 	NSLog(@"<< MocogaDelegate >> mocogaUpdateCurrency called");
 	
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"SAMPLEPUBLISHER_NOTI_UPDATED_POINTS"
-                                                        object:self
-                                                      userInfo:nil];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"SAMPLEPUBLISHER_NOTI_UPDATED_POINTS"
+														object:self
+													  userInfo:nil];
 }
 
 /*
@@ -149,6 +211,87 @@
 - (void)mocogaDidHideOfferView {
 	// 게임의 경우, 게임을 재개하는 코드를 넣을 수 있습니다.
 	NSLog(@"<< MocogaDelegate >> mocogaDidHideOfferView called");
+}
+
+@end
+
+@implementation AppDelegate (SampleRewardServerMethods)
+
+#pragma mark -
+#pragma mark Sample reward server
+- (void)getPointFromSampleGameServer {
+    NSString *requestString = [NSString stringWithFormat:@"http://sample-reward.mocoga.com/get_currency?user_id=%@", [[Mocoga shared] getUserID]];
+	NSURL *pointURL = [NSURL URLWithString:requestString];
+	NSMutableURLRequest *pointRequest = [NSMutableURLRequest requestWithURL:pointURL
+                                                                cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+                                                            timeoutInterval:30];
+	
+	if (self.pointConnection) {
+		[self.pointConnection cancel];
+		self.pointConnection = nil;
+	}
+	
+	self.pointConnection = [NSURLConnection connectionWithRequest:pointRequest delegate:self];
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"REWARD_POINT_INDICATOR_STARTANIMATING"
+														object:self
+													  userInfo:nil];
+}
+
+@end
+
+@implementation AppDelegate (SampleRewardServerConnections)
+
+#pragma mark -
+#pragma mark Delegate methods for sample reward server
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    if (self.pointData == nil) {
+		self.pointData = [NSMutableData data];
+	}
+    
+    [self.pointData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [self.pointData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"REWARD_POINT_INDICATOR_STOPANIMATING"
+														object:self
+													  userInfo:nil];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"REWARD_POINT_INDICATOR_STOPANIMATING"
+														object:self
+													  userInfo:nil];
+	
+	NSString *result = [[[NSString alloc] initWithBytes:[pointData bytes] length:[pointData length] encoding:NSUTF8StringEncoding] autorelease];
+	NSDictionary *jsonDic = [result objectFromJSONString];
+	
+	if (jsonDic) {
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"REWARD_POINT_DIDUPDATE"
+															object:self
+														  userInfo:[NSDictionary dictionaryWithObject:jsonDic forKey:@"result"]];
+    }
+}
+
+@end
+
+@implementation AppDelegate (SampleRewardServerNotifications)
+
+#pragma mark -
+#pragma mark Notification Methods
+
+- (void)foregroundNotificationReceived:(NSNotification *)notification {
+    [self getPointFromSampleGameServer];
+}
+
+- (void)updatedPointsNotificationReceived:(NSNotification *)notification {
+    [self getPointFromSampleGameServer];
 }
 
 @end

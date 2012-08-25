@@ -19,7 +19,17 @@
 
 @end
 
+@interface FirstViewController (SampleGamePointMethods)
+- (NSUInteger)getPointsFromClient;
+@end
+
+@interface FirstViewController (NSNotificationMethods)
+- (void)gamePointDidUpdateNotification:(NSNotification *)notification;
+@end
+
 @implementation FirstViewController
+
+@synthesize gamePointLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,10 +45,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(gamePointDidUpdateNotification:)
+                                                 name:@"SAMPLEPUBLISHER_NOTI_UPDATED_POINTS"
+                                               object:nil];
+    
+	self.gamePointLabel.text = [NSString stringWithFormat:@"%d", [self getPointsFromClient]];
 }
 
 - (void)viewDidUnload
 {
+    [self setGamePointLabel:nil];
+	
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -75,7 +94,7 @@
 	 *     (e.g. willAnimateRotationToInterfaceOrientation가 불릴 때)
 	 *   : showOfferConAtPoint:size:autoresizingMask 메소드를 사용하여 화면 회전에 자동 대응될 수 있도록 구현하실 수 있습니다.
 	 */
-	[[Mocoga shared] showOfferConAtPoint:CGPointMake(30.f, 60.f)
+	[[Mocoga shared] showOfferConAtPoint:CGPointMake(10.f, 60.f)
 									size:MocogaOfferConSizeLarge
 						autoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin)];
 }
@@ -92,7 +111,30 @@
 }
 
 - (void)dealloc {
+    [gamePointLabel release];
+	
 	[super dealloc];
+}
+
+@end
+
+@implementation FirstViewController (SampleGamePointMethods)
+
+#pragma mark -
+#pragma mark Game Points for Client
+- (NSUInteger)getPointsFromClient {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSUInteger points = [prefs integerForKey:@"GamePointsFromClient"];
+    return points;
+}
+@end
+
+@implementation FirstViewController (NSNotificationMethods)
+
+#pragma mark -
+#pragma mark Notification methods
+- (void)gamePointDidUpdateNotification:(NSNotification *)notification {
+	self.gamePointLabel.text = [NSString stringWithFormat:@"%d", [self getPointsFromClient]];
 }
 
 @end
