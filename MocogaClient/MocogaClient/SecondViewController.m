@@ -75,16 +75,28 @@
 	 *     (e.g. willAnimateRotationToInterfaceOrientation가 불릴 때)
 	 *   : showOfferConAtPoint:size:autoresizingMask 메소드를 사용하여 화면 회전에 자동 대응될 수 있도록 구현하실 수 있습니다.
 	 */
+	
+	CGPoint offerConPoint = CGPointZero;
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-		[[Mocoga shared] showOfferConAtPoint:CGPointMake(260.f, 350.f)
-										size:MocogaOfferConSizeNormal
-							autoresizingMask:(UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin)];
+		if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
+			offerConPoint = CGPointMake(250.f, 350.f);
+		}
+		else {
+			offerConPoint = CGPointMake(350.f, 200.f);
+		}
 	}
 	else {
-		[[Mocoga shared] showOfferConAtPoint:CGPointMake(500.f, 650.f)
-										size:MocogaOfferConSizeNormal
-							autoresizingMask:(UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin)];
+		if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
+			offerConPoint = CGPointMake(500.f, 750.f);
+		}
+		else {
+			offerConPoint = CGPointMake(850.f, 600.f);
+		}
 	}
+	
+	[[Mocoga shared] showOfferConAtPoint:offerConPoint
+									size:MocogaOfferConSizeNormal
+						autoresizingMask:(UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
