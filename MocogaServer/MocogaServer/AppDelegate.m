@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  MocogaServer
 //
-//  Created by dev@mocoga.com on 12. 8. 24..
-//  Copyright (c) 2012년 Mocoga. All rights reserved.
+//  Created by dev@mocoga.com Mocoga Development Team on 12. 8. 27.
+//  Copyright (c) 2012 Mocoga, nTels Company. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -116,6 +116,15 @@
 	 */
 	[[Mocoga shared] setUserID:[UIDevice currentDevice].uniqueIdentifier];
 	
+	/*
+	 * << 가상화폐 관리 방식 >>
+	 *
+	 * - 앱 내 가상화폐의 관리방식(서버 관리 or 클라이언트 관리)에 따라 Mocoga에서 보상을 지급하는 방식에 차이가 있습니다.
+	 * - 서버에서 관리하신다면
+	 *   : Mocoga는 사용자에게 보상지급이 필요할 경우, 운영 중이신 서버로 보상을 요청하게 됩니다.
+	 *   : 퍼블리셔 캠페인의 가상화폐 정보에서 "서버"를 선택하시고, 구현하신 보상 지급 서버 URL 을 입력합니다.
+	 *   : 주의! 하단 구현방식은 샘플앱을 위한 서버 보상지급 구현입니다. 실제 구현시에는 해당 서버에 맞는 구현을 하시길 바랍니다.
+	 */
 	[[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(foregroundNotificationReceived:)
                                                  name:UIApplicationWillEnterForegroundNotification

@@ -1,8 +1,9 @@
 //
 //  Mocoga.h
-//  Mocoga SDK
+//  Mocoga Publisher SDK
+//	Version 0.9
 //
-//  Created by dev@mocoga.com Mocoga Development Team on 5/5/12.
+//  Created by dev@mocoga.com Mocoga Development Team on 12. 8. 27.
 //  Copyright (c) 2012 Mocoga, nTels Company. All rights reserved.
 //
 
@@ -117,8 +118,6 @@ typedef NSUInteger MocogaOfferConSize;
  @see mocogaRequestsToGiveReward:withInfo:
  */
 - (void)didGiveReward:(NSString *)rewardTransId;
-
-@property (nonatomic, assign) id delegate;
 
 @end
 

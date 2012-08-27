@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  MocogaClient
 //
-//  Created by dev@mocoga.com on 12. 8. 24..
-//  Copyright (c) 2012년 Mocoga. All rights reserved.
+//  Created by dev@mocoga.com Mocoga Development Team on 12. 8. 27.
+//  Copyright (c) 2012 Mocoga, nTels Company. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -143,6 +143,17 @@
  */
 
 - (void)mocogaRequestsToGiveReward:(NSString *)rewardTransId withInfo:(NSDictionary *)rewardInfo {
+	/*
+	 * << 가상화폐 관리 방식 >>
+	 *
+	 * - 앱 내 가상화폐의 관리방식(서버 관리 or 클라이언트 관리)에 따라 Mocoga에서 보상을 지급하는 방식에 차이가 있습니다.
+	 * - 클라이언트에서 관리하신다면
+	 *   : Mocoga는 사용자에게 보상지급이 필요할 경우, 클라이언트로 보상을 요청하게 됩니다.
+	 *   : 퍼블리셔 캠페인의 가상화폐 정보에서 "클라이언트"를 선택합니다.
+	 *   : 클라이언트에서 Mocoga SDK가 호출해주는 mocogaRequestsToGiveReward 메소드를 구현합니다.
+	 *   : 주의! 하단 구현방식은 샘플앱을 위한 클라이언트 보상지급 구현입니다. 실제 구현시에는 해당 서버에 맞는 구현을 하시길 바랍니다.
+	 */
+	
     // 사용자에게 reward_amount 에 해당하는 보상을 지급합니다.
     // 가상화폐 UI 를 업데이트합니다.
 	NSLog(@"<< MocogaDelegate >> mocogaRequestsToGiveReward called");

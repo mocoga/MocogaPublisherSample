@@ -30,6 +30,8 @@
 		BF93B0B415E79FAD00939C37 /* Mocoga.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF93B0B315E79FAD00939C37 /* Mocoga.bundle */; };
 		BF93B0BF15E7ADFA00939C37 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B0BD15E7ADFA00939C37 /* Icon.png */; };
 		BF93B0C015E7ADFA00939C37 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B0BE15E7ADFA00939C37 /* Icon@2x.png */; };
+		BFE8D78A15EB230700B698D0 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D78815EB230700B698D0 /* Icon-72.png */; };
+		BFE8D78B15EB230700B698D0 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D78915EB230700B698D0 /* Icon-72@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		BF93B0B315E79FAD00939C37 /* Mocoga.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Mocoga.bundle; path = ../../Resources/Mocoga.bundle; sourceTree = "<group>"; };
 		BF93B0BD15E7ADFA00939C37 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Resources/Icon.png; sourceTree = "<group>"; };
 		BF93B0BE15E7ADFA00939C37 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Resources/Icon@2x.png"; sourceTree = "<group>"; };
+		BFE8D78815EB230700B698D0 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../../Resources/Icon-72.png"; sourceTree = "<group>"; };
+		BFE8D78915EB230700B698D0 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../../Resources/Icon-72@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 			children = (
 				BF93B0BD15E7ADFA00939C37 /* Icon.png */,
 				BF93B0BE15E7ADFA00939C37 /* Icon@2x.png */,
+				BFE8D78815EB230700B698D0 /* Icon-72.png */,
+				BFE8D78915EB230700B698D0 /* Icon-72@2x.png */,
 				BF93B0B315E79FAD00939C37 /* Mocoga.bundle */,
 				BF93B07C15E79EDA00939C37 /* MocogaClient-Info.plist */,
 				BF93B07D15E79EDA00939C37 /* InfoPlist.strings */,
@@ -212,6 +218,8 @@
 				BF93B0B415E79FAD00939C37 /* Mocoga.bundle in Resources */,
 				BF93B0BF15E7ADFA00939C37 /* Icon.png in Resources */,
 				BF93B0C015E7ADFA00939C37 /* Icon@2x.png in Resources */,
+				BFE8D78A15EB230700B698D0 /* Icon-72.png in Resources */,
+				BFE8D78B15EB230700B698D0 /* Icon-72@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +389,7 @@
 				BF93B0A415E79EDA00939C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

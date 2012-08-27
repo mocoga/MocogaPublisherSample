@@ -2,8 +2,8 @@
 //  SecondViewController.m
 //  MocogaServer
 //
-//  Created by dev@mocoga.com on 12. 8. 24..
-//  Copyright (c) 2012년 Mocoga. All rights reserved.
+//  Created by dev@mocoga.com Mocoga Development Team on 12. 8. 27.
+//  Copyright (c) 2012 Mocoga, nTels Company. All rights reserved.
 //
 
 #import "SecondViewController.h"
@@ -102,8 +102,7 @@
 	}
 
 	[[Mocoga shared] showOfferConAtPoint:offerConPoint
-									size:MocogaOfferConSizeNormal
-						autoresizingMask:(UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin)];
+									size:MocogaOfferConSizeNormal];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
