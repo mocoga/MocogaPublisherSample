@@ -35,8 +35,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		self.title = NSLocalizedString(@"First", @"First");
-		self.tabBarItem.image = [UIImage imageNamed:@"first"];
+		self.title = NSLocalizedString(@"Large", @"Large");
 		
 		/*
 		 * << 가상화폐 관리 방식 >>
@@ -60,6 +59,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_gray"]];
     
 	self.gamePointLabel.text = [NSString stringWithFormat:@"%d", [self getPointsFromClient]];
 }
@@ -104,7 +105,26 @@
 	 *     (e.g. willAnimateRotationToInterfaceOrientation가 불릴 때)
 	 *   : showOfferConAtPoint:size:autoresizingMask 메소드를 사용하여 화면 회전에 자동 대응될 수 있도록 구현하실 수 있습니다.
 	 */
-	[[Mocoga shared] showOfferConAtPoint:CGPointMake(10.f, 60.f)
+	
+	CGPoint offerConPoint = CGPointZero;
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+		if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
+			offerConPoint = CGPointMake(40.f, 285.f);
+		}
+		else {
+			offerConPoint = CGPointMake(40.f, 160.f);
+		}
+	}
+	else {
+		if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
+			offerConPoint = CGPointMake(100.f, 725.f);
+		}
+		else {
+			offerConPoint = CGPointMake(100.f, 465.f);
+		}
+	}
+	
+	[[Mocoga shared] showOfferConAtPoint:offerConPoint
 									size:MocogaOfferConSizeLarge];
 }
 

@@ -14,11 +14,7 @@
 		BF93B08115E79EDA00939C37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B08015E79EDA00939C37 /* main.m */; };
 		BF93B08515E79EDA00939C37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B08415E79EDA00939C37 /* AppDelegate.m */; };
 		BF93B08815E79EDA00939C37 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B08715E79EDA00939C37 /* FirstViewController.m */; };
-		BF93B08A15E79EDA00939C37 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B08915E79EDA00939C37 /* first.png */; };
-		BF93B08C15E79EDA00939C37 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B08B15E79EDA00939C37 /* first@2x.png */; };
 		BF93B08F15E79EDA00939C37 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B08E15E79EDA00939C37 /* SecondViewController.m */; };
-		BF93B09115E79EDA00939C37 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B09015E79EDA00939C37 /* second.png */; };
-		BF93B09315E79EDA00939C37 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B09215E79EDA00939C37 /* second@2x.png */; };
 		BF93B09615E79EDA00939C37 /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF93B09415E79EDA00939C37 /* FirstViewController_iPhone.xib */; };
 		BF93B09915E79EDA00939C37 /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF93B09715E79EDA00939C37 /* FirstViewController_iPad.xib */; };
 		BF93B09C15E79EDA00939C37 /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF93B09A15E79EDA00939C37 /* SecondViewController_iPhone.xib */; };
@@ -28,10 +24,16 @@
 		BF93B0B015E79F2D00939C37 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B0AD15E79F2D00939C37 /* SystemConfiguration.framework */; };
 		BF93B0B215E79FA900939C37 /* MocogaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B0B115E79FA900939C37 /* MocogaSDK.framework */; };
 		BF93B0B415E79FAD00939C37 /* Mocoga.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF93B0B315E79FAD00939C37 /* Mocoga.bundle */; };
-		BF93B0BF15E7ADFA00939C37 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B0BD15E7ADFA00939C37 /* Icon.png */; };
-		BF93B0C015E7ADFA00939C37 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93B0BE15E7ADFA00939C37 /* Icon@2x.png */; };
-		BFE8D78A15EB230700B698D0 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D78815EB230700B698D0 /* Icon-72.png */; };
-		BFE8D78B15EB230700B698D0 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D78915EB230700B698D0 /* Icon-72@2x.png */; };
+		BFE8D79315EB355400B698D0 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE8D79115EB355400B698D0 /* ThirdViewController.m */; };
+		BFE8D79415EB355400B698D0 /* ThirdViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D79215EB355400B698D0 /* ThirdViewController_iPad.xib */; };
+		BFE8D79615EB358300B698D0 /* ThirdViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D79515EB358300B698D0 /* ThirdViewController_iPhone.xib */; };
+		BFE8D7A315EB36D500B698D0 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D79F15EB36D500B698D0 /* Icon-72.png */; };
+		BFE8D7A415EB36D500B698D0 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7A015EB36D500B698D0 /* Icon-72@2x.png */; };
+		BFE8D7A515EB36D500B698D0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7A115EB36D500B698D0 /* Icon.png */; };
+		BFE8D7A615EB36D500B698D0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7A215EB36D500B698D0 /* Icon@2x.png */; };
+		BFE8D7BA15EB39A600B698D0 /* Default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7B815EB39A600B698D0 /* Default.jpg */; };
+		BFE8D7BB15EB39A600B698D0 /* Default@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7B915EB39A600B698D0 /* Default@2x.jpg */; };
+		BFE8D7C315EB3AA200B698D0 /* bg_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7C215EB3AA200B698D0 /* bg_gray.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,12 +49,8 @@
 		BF93B08415E79EDA00939C37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BF93B08615E79EDA00939C37 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		BF93B08715E79EDA00939C37 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		BF93B08915E79EDA00939C37 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		BF93B08B15E79EDA00939C37 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		BF93B08D15E79EDA00939C37 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		BF93B08E15E79EDA00939C37 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		BF93B09015E79EDA00939C37 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		BF93B09215E79EDA00939C37 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		BF93B09515E79EDA00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
 		BF93B09815E79EDA00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
 		BF93B09B15E79EDA00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -62,10 +60,17 @@
 		BF93B0AD15E79F2D00939C37 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BF93B0B115E79FA900939C37 /* MocogaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MocogaSDK.framework; path = ../Resources/MocogaSDK.framework; sourceTree = "<group>"; };
 		BF93B0B315E79FAD00939C37 /* Mocoga.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Mocoga.bundle; path = ../../Resources/Mocoga.bundle; sourceTree = "<group>"; };
-		BF93B0BD15E7ADFA00939C37 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Resources/Icon.png; sourceTree = "<group>"; };
-		BF93B0BE15E7ADFA00939C37 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Resources/Icon@2x.png"; sourceTree = "<group>"; };
-		BFE8D78815EB230700B698D0 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../../Resources/Icon-72.png"; sourceTree = "<group>"; };
-		BFE8D78915EB230700B698D0 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../../Resources/Icon-72@2x.png"; sourceTree = "<group>"; };
+		BFE8D79015EB355400B698D0 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		BFE8D79115EB355400B698D0 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		BFE8D79215EB355400B698D0 /* ThirdViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController_iPad.xib; sourceTree = "<group>"; };
+		BFE8D79515EB358300B698D0 /* ThirdViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController_iPhone.xib; sourceTree = "<group>"; };
+		BFE8D79F15EB36D500B698D0 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		BFE8D7A015EB36D500B698D0 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		BFE8D7A115EB36D500B698D0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		BFE8D7A215EB36D500B698D0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		BFE8D7B815EB39A600B698D0 /* Default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Default.jpg; path = ../../Resources/Default.jpg; sourceTree = "<group>"; };
+		BFE8D7B915EB39A600B698D0 /* Default@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Default@2x.jpg"; path = "../../Resources/Default@2x.jpg"; sourceTree = "<group>"; };
+		BFE8D7C215EB3AA200B698D0 /* bg_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_gray.png; path = ../../Resources/bg_gray.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,16 +129,16 @@
 				BF93B08415E79EDA00939C37 /* AppDelegate.m */,
 				BF93B08615E79EDA00939C37 /* FirstViewController.h */,
 				BF93B08715E79EDA00939C37 /* FirstViewController.m */,
-				BF93B08915E79EDA00939C37 /* first.png */,
-				BF93B08B15E79EDA00939C37 /* first@2x.png */,
 				BF93B08D15E79EDA00939C37 /* SecondViewController.h */,
 				BF93B08E15E79EDA00939C37 /* SecondViewController.m */,
-				BF93B09015E79EDA00939C37 /* second.png */,
-				BF93B09215E79EDA00939C37 /* second@2x.png */,
+				BFE8D79015EB355400B698D0 /* ThirdViewController.h */,
+				BFE8D79115EB355400B698D0 /* ThirdViewController.m */,
 				BF93B09415E79EDA00939C37 /* FirstViewController_iPhone.xib */,
 				BF93B09715E79EDA00939C37 /* FirstViewController_iPad.xib */,
 				BF93B09A15E79EDA00939C37 /* SecondViewController_iPhone.xib */,
 				BF93B09D15E79EDA00939C37 /* SecondViewController_iPad.xib */,
+				BFE8D79515EB358300B698D0 /* ThirdViewController_iPhone.xib */,
+				BFE8D79215EB355400B698D0 /* ThirdViewController_iPad.xib */,
 				BF93B07B15E79EDA00939C37 /* Supporting Files */,
 			);
 			path = MocogaClient;
@@ -142,10 +147,7 @@
 		BF93B07B15E79EDA00939C37 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BF93B0BD15E7ADFA00939C37 /* Icon.png */,
-				BF93B0BE15E7ADFA00939C37 /* Icon@2x.png */,
-				BFE8D78815EB230700B698D0 /* Icon-72.png */,
-				BFE8D78915EB230700B698D0 /* Icon-72@2x.png */,
+				BFE8D7A715EB36D900B698D0 /* Images */,
 				BF93B0B315E79FAD00939C37 /* Mocoga.bundle */,
 				BF93B07C15E79EDA00939C37 /* MocogaClient-Info.plist */,
 				BF93B07D15E79EDA00939C37 /* InfoPlist.strings */,
@@ -153,6 +155,20 @@
 				BF93B08215E79EDA00939C37 /* MocogaClient-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFE8D7A715EB36D900B698D0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BFE8D7C215EB3AA200B698D0 /* bg_gray.png */,
+				BFE8D7B815EB39A600B698D0 /* Default.jpg */,
+				BFE8D7B915EB39A600B698D0 /* Default@2x.jpg */,
+				BFE8D79F15EB36D500B698D0 /* Icon-72.png */,
+				BFE8D7A015EB36D500B698D0 /* Icon-72@2x.png */,
+				BFE8D7A115EB36D500B698D0 /* Icon.png */,
+				BFE8D7A215EB36D500B698D0 /* Icon@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,19 +223,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF93B07F15E79EDA00939C37 /* InfoPlist.strings in Resources */,
-				BF93B08A15E79EDA00939C37 /* first.png in Resources */,
-				BF93B08C15E79EDA00939C37 /* first@2x.png in Resources */,
-				BF93B09115E79EDA00939C37 /* second.png in Resources */,
-				BF93B09315E79EDA00939C37 /* second@2x.png in Resources */,
 				BF93B09615E79EDA00939C37 /* FirstViewController_iPhone.xib in Resources */,
 				BF93B09915E79EDA00939C37 /* FirstViewController_iPad.xib in Resources */,
 				BF93B09C15E79EDA00939C37 /* SecondViewController_iPhone.xib in Resources */,
 				BF93B09F15E79EDA00939C37 /* SecondViewController_iPad.xib in Resources */,
 				BF93B0B415E79FAD00939C37 /* Mocoga.bundle in Resources */,
-				BF93B0BF15E7ADFA00939C37 /* Icon.png in Resources */,
-				BF93B0C015E7ADFA00939C37 /* Icon@2x.png in Resources */,
-				BFE8D78A15EB230700B698D0 /* Icon-72.png in Resources */,
-				BFE8D78B15EB230700B698D0 /* Icon-72@2x.png in Resources */,
+				BFE8D79415EB355400B698D0 /* ThirdViewController_iPad.xib in Resources */,
+				BFE8D79615EB358300B698D0 /* ThirdViewController_iPhone.xib in Resources */,
+				BFE8D7A315EB36D500B698D0 /* Icon-72.png in Resources */,
+				BFE8D7A415EB36D500B698D0 /* Icon-72@2x.png in Resources */,
+				BFE8D7A515EB36D500B698D0 /* Icon.png in Resources */,
+				BFE8D7A615EB36D500B698D0 /* Icon@2x.png in Resources */,
+				BFE8D7BA15EB39A600B698D0 /* Default.jpg in Resources */,
+				BFE8D7BB15EB39A600B698D0 /* Default@2x.jpg in Resources */,
+				BFE8D7C315EB3AA200B698D0 /* bg_gray.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +251,7 @@
 				BF93B08515E79EDA00939C37 /* AppDelegate.m in Sources */,
 				BF93B08815E79EDA00939C37 /* FirstViewController.m in Sources */,
 				BF93B08F15E79EDA00939C37 /* SecondViewController.m in Sources */,
+				BFE8D79315EB355400B698D0 /* ThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

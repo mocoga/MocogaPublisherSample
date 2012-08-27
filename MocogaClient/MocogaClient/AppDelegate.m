@@ -9,8 +9,8 @@
 #import "AppDelegate.h"
 
 #import "FirstViewController.h"
-
 #import "SecondViewController.h"
+#import "ThirdViewController.h"
 
 /*
  * << 헤더 파일 추가 >>
@@ -53,17 +53,19 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
 	
-	UIViewController *viewController1, *viewController2;
+	UIViewController *viewController1, *viewController2, *viewController3;
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil] autorelease];
 	    viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPhone" bundle:nil] autorelease];
+		viewController3 = [[[ThirdViewController alloc] initWithNibName:@"ThirdViewController_iPhone" bundle:nil] autorelease];
 	} else {
 	    viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil] autorelease];
 	    viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil] autorelease];
+		viewController3 = [[[ThirdViewController alloc] initWithNibName:@"ThirdViewController_iPad" bundle:nil] autorelease];
 	}
 	
 	self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-	self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+	self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController3, nil];
 	self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
 	

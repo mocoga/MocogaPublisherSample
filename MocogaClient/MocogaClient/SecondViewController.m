@@ -25,8 +25,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		self.title = NSLocalizedString(@"Second", @"Second");
-		self.tabBarItem.image = [UIImage imageNamed:@"second"];
+		self.title = NSLocalizedString(@"Normal", @"Normal");
     }
     return self;
 }
@@ -35,6 +34,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_gray"]];
 }
 
 - (void)viewDidUnload
@@ -79,18 +80,18 @@
 	CGPoint offerConPoint = CGPointZero;
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 		if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
-			offerConPoint = CGPointMake(250.f, 350.f);
+			offerConPoint = CGPointMake(220.f, 295.f);
 		}
 		else {
-			offerConPoint = CGPointMake(350.f, 200.f);
+			offerConPoint = CGPointMake(400.f, 200.f);
 		}
 	}
 	else {
 		if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
-			offerConPoint = CGPointMake(500.f, 750.f);
+			offerConPoint = CGPointMake(600.f, 745.f);
 		}
 		else {
-			offerConPoint = CGPointMake(850.f, 600.f);
+			offerConPoint = CGPointMake(850.f, 500.f);
 		}
 	}
 	
