@@ -43,7 +43,7 @@
 						<int key="NSvFlags">290</int>
 						<string key="NSFrameSize">{768, 44}</string>
 						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="307344574"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -60,6 +60,7 @@
 						<int key="NSvFlags">265</int>
 						<string key="NSFrame">{{20, 776}, {240, 101}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -90,7 +91,7 @@ nojsirXri4jri6QuA</string>
 					<object class="IBUITextView" id="895209702">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">265</int>
-						<string key="NSFrame">{{184, 506}, {400, 200}}</string>
+						<string key="NSFrame">{{159, 506}, {450, 250}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSNextKeyView" ref="93318457"/>
 						<bool key="IBUIOpaque">NO</bool>

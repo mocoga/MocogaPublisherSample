@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		BF39AEBA15EB65C000389DB2 /* Mocoga.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF39AEB915EB65C000389DB2 /* Mocoga.bundle */; };
+		BF5A022915EB9A5E0068260B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF5A022815EB9A5E0068260B /* InfoPlist.strings */; };
+		BF5A022F15EB9A6B0068260B /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5A022B15EB9A6B0068260B /* FirstViewController_iPad.xib */; };
+		BF5A023015EB9A6B0068260B /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5A022C15EB9A6B0068260B /* FirstViewController_iPhone.xib */; };
+		BF5A023115EB9A6B0068260B /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5A022D15EB9A6B0068260B /* SecondViewController_iPad.xib */; };
+		BF5A023215EB9A6B0068260B /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5A022E15EB9A6B0068260B /* SecondViewController_iPhone.xib */; };
 		BF93B03515E79ECB00939C37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B03415E79ECB00939C37 /* UIKit.framework */; };
 		BF93B03715E79ECB00939C37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B03615E79ECB00939C37 /* Foundation.framework */; };
 		BF93B03915E79ECB00939C37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B03815E79ECB00939C37 /* CoreGraphics.framework */; };
-		BF93B03F15E79ECB00939C37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF93B03D15E79ECB00939C37 /* InfoPlist.strings */; };
 		BF93B04115E79ECB00939C37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B04015E79ECB00939C37 /* main.m */; };
 		BF93B04515E79ECB00939C37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B04415E79ECB00939C37 /* AppDelegate.m */; };
 		BF93B04815E79ECB00939C37 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B04715E79ECB00939C37 /* FirstViewController.m */; };
 		BF93B04F15E79ECB00939C37 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93B04E15E79ECB00939C37 /* SecondViewController.m */; };
-		BF93B05615E79ECB00939C37 /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF93B05415E79ECB00939C37 /* FirstViewController_iPhone.xib */; };
-		BF93B05915E79ECB00939C37 /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF93B05715E79ECB00939C37 /* FirstViewController_iPad.xib */; };
-		BF93B05C15E79ECB00939C37 /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF93B05A15E79ECB00939C37 /* SecondViewController_iPhone.xib */; };
-		BF93B05F15E79ECB00939C37 /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF93B05D15E79ECB00939C37 /* SecondViewController_iPad.xib */; };
 		BF93B0A815E79F1700939C37 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B0A515E79F1700939C37 /* CoreTelephony.framework */; };
 		BF93B0A915E79F1700939C37 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B0A615E79F1700939C37 /* MediaPlayer.framework */; };
 		BF93B0AA15E79F1700939C37 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B0A715E79F1700939C37 /* SystemConfiguration.framework */; };
@@ -37,12 +37,16 @@
 
 /* Begin PBXFileReference section */
 		BF39AEB915EB65C000389DB2 /* Mocoga.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Mocoga.bundle; path = ../../Resources/Mocoga.bundle; sourceTree = "<group>"; };
+		BF5A022815EB9A5E0068260B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		BF5A022B15EB9A6B0068260B /* FirstViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController_iPad.xib; sourceTree = "<group>"; };
+		BF5A022C15EB9A6B0068260B /* FirstViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController_iPhone.xib; sourceTree = "<group>"; };
+		BF5A022D15EB9A6B0068260B /* SecondViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController_iPad.xib; sourceTree = "<group>"; };
+		BF5A022E15EB9A6B0068260B /* SecondViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController_iPhone.xib; sourceTree = "<group>"; };
 		BF93B03015E79ECB00939C37 /* MocogaServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MocogaServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF93B03415E79ECB00939C37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BF93B03615E79ECB00939C37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BF93B03815E79ECB00939C37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BF93B03C15E79ECB00939C37 /* MocogaServer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MocogaServer-Info.plist"; sourceTree = "<group>"; };
-		BF93B03E15E79ECB00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BF93B04015E79ECB00939C37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF93B04215E79ECB00939C37 /* MocogaServer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MocogaServer-Prefix.pch"; sourceTree = "<group>"; };
 		BF93B04315E79ECB00939C37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,10 +55,6 @@
 		BF93B04715E79ECB00939C37 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		BF93B04D15E79ECB00939C37 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		BF93B04E15E79ECB00939C37 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		BF93B05515E79ECB00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
-		BF93B05815E79ECB00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
-		BF93B05B15E79ECB00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
-		BF93B05E15E79ECB00939C37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
 		BF93B0A515E79F1700939C37 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		BF93B0A615E79F1700939C37 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		BF93B0A715E79F1700939C37 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -133,10 +133,10 @@
 				BF93B04E15E79ECB00939C37 /* SecondViewController.m */,
 				BFE8D7B115EB375500B698D0 /* ThirdViewController.h */,
 				BFE8D7B215EB375500B698D0 /* ThirdViewController.m */,
-				BF93B05415E79ECB00939C37 /* FirstViewController_iPhone.xib */,
-				BF93B05715E79ECB00939C37 /* FirstViewController_iPad.xib */,
-				BF93B05A15E79ECB00939C37 /* SecondViewController_iPhone.xib */,
-				BF93B05D15E79ECB00939C37 /* SecondViewController_iPad.xib */,
+				BF5A022C15EB9A6B0068260B /* FirstViewController_iPhone.xib */,
+				BF5A022B15EB9A6B0068260B /* FirstViewController_iPad.xib */,
+				BF5A022E15EB9A6B0068260B /* SecondViewController_iPhone.xib */,
+				BF5A022D15EB9A6B0068260B /* SecondViewController_iPad.xib */,
 				BFE8D7B615EB377000B698D0 /* ThirdViewController_iPhone.xib */,
 				BFE8D7B315EB375500B698D0 /* ThirdViewController_iPad.xib */,
 				BF93B03B15E79ECB00939C37 /* Supporting Files */,
@@ -150,7 +150,7 @@
 				BFE8D7B015EB370F00B698D0 /* Images */,
 				BF39AEB915EB65C000389DB2 /* Mocoga.bundle */,
 				BF93B03C15E79ECB00939C37 /* MocogaServer-Info.plist */,
-				BF93B03D15E79ECB00939C37 /* InfoPlist.strings */,
+				BF5A022815EB9A5E0068260B /* InfoPlist.strings */,
 				BF93B04015E79ECB00939C37 /* main.m */,
 				BF93B04215E79ECB00939C37 /* MocogaServer-Prefix.pch */,
 			);
@@ -229,11 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF93B03F15E79ECB00939C37 /* InfoPlist.strings in Resources */,
-				BF93B05615E79ECB00939C37 /* FirstViewController_iPhone.xib in Resources */,
-				BF93B05915E79ECB00939C37 /* FirstViewController_iPad.xib in Resources */,
-				BF93B05C15E79ECB00939C37 /* SecondViewController_iPhone.xib in Resources */,
-				BF93B05F15E79ECB00939C37 /* SecondViewController_iPad.xib in Resources */,
 				BFE8D7AC15EB370C00B698D0 /* Icon-72.png in Resources */,
 				BFE8D7AD15EB370C00B698D0 /* Icon-72@2x.png in Resources */,
 				BFE8D7AE15EB370C00B698D0 /* Icon.png in Resources */,
@@ -242,6 +237,11 @@
 				BFE8D7B715EB377000B698D0 /* ThirdViewController_iPhone.xib in Resources */,
 				BFE8D7C115EB3A9D00B698D0 /* bg_gray.png in Resources */,
 				BF39AEBA15EB65C000389DB2 /* Mocoga.bundle in Resources */,
+				BF5A022915EB9A5E0068260B /* InfoPlist.strings in Resources */,
+				BF5A022F15EB9A6B0068260B /* FirstViewController_iPad.xib in Resources */,
+				BF5A023015EB9A6B0068260B /* FirstViewController_iPhone.xib in Resources */,
+				BF5A023115EB9A6B0068260B /* SecondViewController_iPad.xib in Resources */,
+				BF5A023215EB9A6B0068260B /* SecondViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,49 +262,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		BF93B03D15E79ECB00939C37 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF93B03E15E79ECB00939C37 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		BF93B05415E79ECB00939C37 /* FirstViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF93B05515E79ECB00939C37 /* en */,
-			);
-			name = FirstViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		BF93B05715E79ECB00939C37 /* FirstViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF93B05815E79ECB00939C37 /* en */,
-			);
-			name = FirstViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-		BF93B05A15E79ECB00939C37 /* SecondViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF93B05B15E79ECB00939C37 /* en */,
-			);
-			name = SecondViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		BF93B05D15E79ECB00939C37 /* SecondViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF93B05E15E79ECB00939C37 /* en */,
-			);
-			name = SecondViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BF93B06015E79ECB00939C37 /* Debug */ = {
