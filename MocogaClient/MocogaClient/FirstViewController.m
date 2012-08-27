@@ -125,7 +125,8 @@
 	}
 	
 	[[Mocoga shared] showOfferConAtPoint:offerConPoint
-									size:MocogaOfferConSizeLarge];
+									size:MocogaOfferConSizeLarge
+						autoresizingMask:(UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

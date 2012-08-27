@@ -32,8 +32,6 @@
 		BFE8D7B415EB375500B698D0 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE8D7B215EB375500B698D0 /* ThirdViewController.m */; };
 		BFE8D7B515EB375500B698D0 /* ThirdViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7B315EB375500B698D0 /* ThirdViewController_iPad.xib */; };
 		BFE8D7B715EB377000B698D0 /* ThirdViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7B615EB377000B698D0 /* ThirdViewController_iPhone.xib */; };
-		BFE8D7BE15EB39AF00B698D0 /* Default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7BC15EB39AF00B698D0 /* Default.jpg */; };
-		BFE8D7BF15EB39AF00B698D0 /* Default@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7BD15EB39AF00B698D0 /* Default@2x.jpg */; };
 		BFE8D7C115EB3A9D00B698D0 /* bg_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7C015EB3A9D00B698D0 /* bg_gray.png */; };
 /* End PBXBuildFile section */
 
@@ -71,8 +69,6 @@
 		BFE8D7B215EB375500B698D0 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		BFE8D7B315EB375500B698D0 /* ThirdViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController_iPad.xib; sourceTree = "<group>"; };
 		BFE8D7B615EB377000B698D0 /* ThirdViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController_iPhone.xib; sourceTree = "<group>"; };
-		BFE8D7BC15EB39AF00B698D0 /* Default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Default.jpg; path = ../../Resources/Default.jpg; sourceTree = "<group>"; };
-		BFE8D7BD15EB39AF00B698D0 /* Default@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Default@2x.jpg"; path = "../../Resources/Default@2x.jpg"; sourceTree = "<group>"; };
 		BFE8D7C015EB3A9D00B698D0 /* bg_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_gray.png; path = ../../Resources/bg_gray.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,8 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				BFE8D7C015EB3A9D00B698D0 /* bg_gray.png */,
-				BFE8D7BC15EB39AF00B698D0 /* Default.jpg */,
-				BFE8D7BD15EB39AF00B698D0 /* Default@2x.jpg */,
 				BFE8D7A815EB370B00B698D0 /* Icon-72.png */,
 				BFE8D7A915EB370B00B698D0 /* Icon-72@2x.png */,
 				BFE8D7AA15EB370B00B698D0 /* Icon.png */,
@@ -247,8 +241,6 @@
 				BFE8D7AF15EB370C00B698D0 /* Icon@2x.png in Resources */,
 				BFE8D7B515EB375500B698D0 /* ThirdViewController_iPad.xib in Resources */,
 				BFE8D7B715EB377000B698D0 /* ThirdViewController_iPhone.xib in Resources */,
-				BFE8D7BE15EB39AF00B698D0 /* Default.jpg in Resources */,
-				BFE8D7BF15EB39AF00B698D0 /* Default@2x.jpg in Resources */,
 				BFE8D7C115EB3A9D00B698D0 /* bg_gray.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
