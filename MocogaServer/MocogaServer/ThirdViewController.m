@@ -78,18 +78,18 @@
 	CGPoint offerConPoint = CGPointZero;
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 		if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
-			offerConPoint = CGPointMake(140.f, 220.f);
+			offerConPoint = CGPointMake(140.f, 260.f);
 		}
 		else {
-			offerConPoint = CGPointMake(220.f, 140.f);
+			offerConPoint = CGPointMake(260.f, 140.f);
 		}
 	}
 	else {
 		if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
-			offerConPoint = CGPointMake(344.f, 472.f);
+			offerConPoint = CGPointMake(344.f, 772.f);
 		}
 		else {
-			offerConPoint = CGPointMake(472.f, 344.f);
+			offerConPoint = CGPointMake(772.f, 344.f);
 		}
 	}
 	
