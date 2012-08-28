@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF41918C15ECD34E000E488F /* bg_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = BF41918B15ECD34E000E488F /* bg_gray.png */; };
 		BF5A023515EB9B260068260B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF5A023415EB9B260068260B /* InfoPlist.strings */; };
 		BF5A023A15EB9B310068260B /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5A023615EB9B310068260B /* FirstViewController_iPad.xib */; };
 		BF5A023B15EB9B310068260B /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5A023715EB9B310068260B /* FirstViewController_iPhone.xib */; };
@@ -31,10 +32,10 @@
 		BFE8D7A415EB36D500B698D0 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7A015EB36D500B698D0 /* Icon-72@2x.png */; };
 		BFE8D7A515EB36D500B698D0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7A115EB36D500B698D0 /* Icon.png */; };
 		BFE8D7A615EB36D500B698D0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7A215EB36D500B698D0 /* Icon@2x.png */; };
-		BFE8D7C315EB3AA200B698D0 /* bg_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE8D7C215EB3AA200B698D0 /* bg_gray.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF41918B15ECD34E000E488F /* bg_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_gray.png; sourceTree = "<group>"; };
 		BF5A023415EB9B260068260B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		BF5A023615EB9B310068260B /* FirstViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController_iPad.xib; sourceTree = "<group>"; };
 		BF5A023715EB9B310068260B /* FirstViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		BFE8D7A015EB36D500B698D0 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		BFE8D7A115EB36D500B698D0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		BFE8D7A215EB36D500B698D0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		BFE8D7C215EB3AA200B698D0 /* bg_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_gray.png; path = ../../Resources/bg_gray.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,7 @@
 		BFE8D7A715EB36D900B698D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				BFE8D7C215EB3AA200B698D0 /* bg_gray.png */,
+				BF41918B15ECD34E000E488F /* bg_gray.png */,
 				BFE8D79F15EB36D500B698D0 /* Icon-72.png */,
 				BFE8D7A015EB36D500B698D0 /* Icon-72@2x.png */,
 				BFE8D7A115EB36D500B698D0 /* Icon.png */,
@@ -223,12 +223,12 @@
 				BFE8D7A415EB36D500B698D0 /* Icon-72@2x.png in Resources */,
 				BFE8D7A515EB36D500B698D0 /* Icon.png in Resources */,
 				BFE8D7A615EB36D500B698D0 /* Icon@2x.png in Resources */,
-				BFE8D7C315EB3AA200B698D0 /* bg_gray.png in Resources */,
 				BF5A023515EB9B260068260B /* InfoPlist.strings in Resources */,
 				BF5A023A15EB9B310068260B /* FirstViewController_iPad.xib in Resources */,
 				BF5A023B15EB9B310068260B /* FirstViewController_iPhone.xib in Resources */,
 				BF5A023C15EB9B310068260B /* SecondViewController_iPad.xib in Resources */,
 				BF5A023D15EB9B310068260B /* SecondViewController_iPhone.xib in Resources */,
+				BF41918C15ECD34E000E488F /* bg_gray.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +302,10 @@
 		BF93B0A315E79EDA00939C37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -321,7 +325,12 @@
 		BF93B0A415E79EDA00939C37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Resources\"",
@@ -333,6 +342,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
