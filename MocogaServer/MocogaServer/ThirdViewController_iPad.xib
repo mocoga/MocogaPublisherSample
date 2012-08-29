@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1296</int>
+		<int key="IBDocument.SystemTarget">1280</int>
 		<string key="IBDocument.SystemVersion">12B19</string>
 		<string key="IBDocument.InterfaceBuilderVersion">2549</string>
 		<string key="IBDocument.AppKitVersion">1187</string>
@@ -42,6 +42,7 @@
 						<int key="NSvFlags">290</int>
 						<string key="NSFrameSize">{768, 44}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="264571522"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -53,6 +54,7 @@
 						<int key="NSvFlags">265</int>
 						<string key="NSFrame">{{184, 358}, {400, 140}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="38983519"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -87,7 +89,7 @@
 						<int key="NSvFlags">265</int>
 						<string key="NSFrame">{{159, 506}, {450, 250}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -99,9 +101,9 @@
 						<bool key="IBUIBouncesZoom">NO</bool>
 						<bool key="IBUIEditable">NO</bool>
 						<string type="base64-UTF8" key="IBUIText">LSDtjbzruJTrpqzshZQgU0RLIEludGVncmF0aW9u7J2YIOydtO2VtOulvCDrj5Xqs6DsnpAKICDsoJzq
-s7XrkJjripQg7IOY7ZSMIO2UhOuhnOygne2KuOyeheuLiOuLpC4KLSDqsIDsg4HtmZTtj5Drpbwg7YG0
-65287J207Ja47Yq47JeQ7IScIOq0gOumrO2VmOuKlAogIO2NvOu4lOumrOyFlOulvCDrjIDsg4HsnLzr
-oZwg7ZWp64uI64ukLgoK66y47J2Y66mU7J287J2AIGhlbHBAbW9jb2dhLmNvbQ</string>
+s7XrkJjripQg7IOY7ZSMIO2UhOuhnOygne2KuOyeheuLiOuLpC4KLSDqsIDsg4HtmZTtj5Drpbwg7ISc
+67KE7JeQ7IScIOq0gOumrO2VmOuKlCDtjbzruJTrpqzshZTrpbwKICDrjIDsg4HsnLzroZwg7ZWp64uI
+64ukLgoK66y47J2Y66mU7J287J2AIGhlbHBAbW9jb2dhLmNvbQ</string>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
@@ -119,6 +121,7 @@ oZwg7ZWp64uI64ukLgoK66y47J2Y66mU7J287J2AIGhlbHBAbW9jb2dhLmNvbQ</string>
 				</array>
 				<string key="NSFrame">{{0, 20}, {768, 1004}}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="46052726"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -207,13 +210,20 @@ oZwg7ZWp64uI64ukLgoK66y47J2Y66mU7J287J2AIGhlbHBAbW9jb2dhLmNvbQ</string>
 			<nil key="sourceID"/>
 			<int key="maxID">7</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">ThirdViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/ThirdViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
-		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<real value="1296" key="NS.object.0"/>
-		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<string key="IBCocoaTouchPluginVersion">1498</string>
