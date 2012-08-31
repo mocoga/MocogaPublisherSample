@@ -11,5 +11,6 @@
 @interface FirstViewController : UIViewController
 
 @property (retain, nonatomic) IBOutlet UILabel *gamePointLabel;
+@property (retain, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

@@ -12,5 +12,6 @@
 
 @property (retain, nonatomic) IBOutlet UILabel *rewardPointLabel;
 @property (retain, nonatomic) IBOutlet UIActivityIndicatorView *rewardPointIndicator;
+@property (retain, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

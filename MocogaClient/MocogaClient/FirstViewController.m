@@ -29,6 +29,7 @@
 
 @implementation FirstViewController
 
+@synthesize titleLabel;
 @synthesize gamePointLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -62,12 +63,17 @@
 	
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_gray"]];
     
-	self.gamePointLabel.text = [NSString stringWithFormat:@"%d", [self getPointsFromClient]];
+	self.gamePointLabel.text = [NSString stringWithFormat:@"%d Point", [self getPointsFromClient]];
+	
+	self.titleLabel.text = [NSString stringWithFormat:@"%@\nv%@",
+							self.titleLabel.text,
+							[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
 }
 
 - (void)viewDidUnload
 {
     [self setGamePointLabel:nil];
+    [self setTitleLabel:nil];
 	
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -141,7 +147,12 @@
 }
 
 - (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:@"SAMPLEPUBLISHER_NOTI_UPDATED_POINTS"
+												  object:nil];
+	
     [gamePointLabel release];
+    [titleLabel release];
 	
 	[super dealloc];
 }
@@ -164,7 +175,7 @@
 #pragma mark -
 #pragma mark Notification methods
 - (void)gamePointDidUpdateNotification:(NSNotification *)notification {
-	self.gamePointLabel.text = [NSString stringWithFormat:@"%d", [self getPointsFromClient]];
+	self.gamePointLabel.text = [NSString stringWithFormat:@"%d Point", [self getPointsFromClient]];
 }
 
 @end

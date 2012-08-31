@@ -78,10 +78,10 @@ nojsirXri4jri6QuA</string>
 					<object class="IBUILabel" id="786398917">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">289</int>
-						<string key="NSFrame">{{20, 20}, {280, 70}}</string>
+						<string key="NSFrame">{{20, 20}, {280, 72}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="370189478"/>
+						<reference key="NSNextKeyView" ref="288097860"/>
 						<reference key="IBUIBackgroundColor" ref="301879153"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -95,25 +95,25 @@ nojsirXri4jri6QuA</string>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
-						<int key="IBUINumberOfLines">2</int>
+						<int key="IBUINumberOfLines">3</int>
 						<int key="IBUITextAlignment">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<int key="type">2</int>
-							<double key="pointSize">24</double>
+							<double key="pointSize">20</double>
 						</object>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">24</double>
+							<double key="NSSize">20</double>
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
 					<object class="IBUITextView" id="288097860">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">289</int>
-						<string key="NSFrame">{{10, 87}, {300, 150}}</string>
+						<string key="NSFrame">{{10, 100}, {300, 150}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="786398917"/>
+						<reference key="NSNextKeyView" ref="370189478"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -223,7 +223,7 @@ s7XrkJjripQg7IOY7ZSMIO2UhOuhnOygne2KuOyeheuLiOuLpC4KLSDqsIDsg4HtmZTtj5Drpbwg7ISc
 				<string key="NSFrame">{{0, 20}, {320, 411}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="288097860"/>
+				<reference key="NSNextKeyView" ref="786398917"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -258,6 +258,14 @@ s7XrkJjripQg7IOY7ZSMIO2UhOuhnOygne2KuOyeheuLiOuLpC4KLSDqsIDsg4HtmZTtj5Drpbwg7ISc
 						<reference key="destination" ref="950874134"/>
 					</object>
 					<int key="connectionID">16</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">titleLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="786398917"/>
+					</object>
+					<int key="connectionID">25</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -350,7 +358,7 @@ s7XrkJjripQg7IOY7ZSMIO2UhOuhnOygne2KuOyeheuLiOuLpC4KLSDqsIDsg4HtmZTtj5Drpbwg7ISc
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">24</int>
+			<int key="maxID">25</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -361,6 +369,7 @@ s7XrkJjripQg7IOY7ZSMIO2UhOuhnOygne2KuOyeheuLiOuLpC4KLSDqsIDsg4HtmZTtj5Drpbwg7ISc
 						<string key="gamePointLabel">UILabel</string>
 						<string key="rewardPointIndicator">UIActivityIndicatorView</string>
 						<string key="rewardPointLabel">UILabel</string>
+						<string key="titleLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="gamePointLabel">
@@ -373,6 +382,10 @@ s7XrkJjripQg7IOY7ZSMIO2UhOuhnOygne2KuOyeheuLiOuLpC4KLSDqsIDsg4HtmZTtj5Drpbwg7ISc
 						</object>
 						<object class="IBToOneOutletInfo" key="rewardPointLabel">
 							<string key="name">rewardPointLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="titleLabel">
+							<string key="name">titleLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>

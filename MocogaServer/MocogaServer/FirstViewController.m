@@ -29,6 +29,7 @@
 
 @synthesize rewardPointLabel;
 @synthesize rewardPointIndicator;
+@synthesize titleLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,12 +70,18 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_gray"]];
+	
+	self.titleLabel.text = [NSString stringWithFormat:@"%@\nv%@",
+							self.titleLabel.text,
+							[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
 }
 
 - (void)viewDidUnload
 {
+	[self setTitleLabel:nil];
 	[self setRewardPointLabel:nil];
 	[self setRewardPointIndicator:nil];
+	
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -159,6 +166,7 @@
 													name:@"REWARD_POINT_DIDUPDATE"
 												  object:nil];
 	
+	[titleLabel release];
 	[rewardPointLabel release];
 	[rewardPointIndicator release];
 	
