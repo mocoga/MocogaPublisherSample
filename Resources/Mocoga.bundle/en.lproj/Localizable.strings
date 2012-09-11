@@ -25,6 +25,7 @@
 "Msg_UnknownError"			= "An error occurred, Try again later.";
 "Msg_ClosedOffer"			= "Sorry\nThis offer was sold out.";
 "Msg_AppAlreadyInstalled"	= "This app is already installed on your device.";
+"Msg_LaunchApp"				= "Launch App"
 
 /* HUD */
 "HUD_RewardReceiving"		= "";

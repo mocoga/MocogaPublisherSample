@@ -25,6 +25,7 @@
 "Msg_UnknownError"			= "오류가 발생하였습니다.\n잠시 뒤에 이용하세요.";
 "Msg_ClosedOffer"			= "이미 마감된 오퍼입니다.";
 "Msg_AppAlreadyInstalled"	= "이미 설치 완료된 앱 입니다.";
+"Msg_LaunchApp"				= "앱 실행하기";
 
 /* HUD */
 "HUD_RewardReceiving"		= "";
