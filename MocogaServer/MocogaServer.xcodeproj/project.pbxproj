@@ -14,6 +14,9 @@
 		BF5A023015EB9A6B0068260B /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5A022C15EB9A6B0068260B /* FirstViewController_iPhone.xib */; };
 		BF5A023115EB9A6B0068260B /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5A022D15EB9A6B0068260B /* SecondViewController_iPad.xib */; };
 		BF5A023215EB9A6B0068260B /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5A022E15EB9A6B0068260B /* SecondViewController_iPhone.xib */; };
+		BF608E201601B27C0059FE7A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF608E1D1601B27C0059FE7A /* Default-568h@2x.png */; };
+		BF608E211601B27C0059FE7A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BF608E1E1601B27C0059FE7A /* Default.png */; };
+		BF608E221601B27C0059FE7A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF608E1F1601B27C0059FE7A /* Default@2x.png */; };
 		BF93B03515E79ECB00939C37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B03415E79ECB00939C37 /* UIKit.framework */; };
 		BF93B03715E79ECB00939C37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B03615E79ECB00939C37 /* Foundation.framework */; };
 		BF93B03915E79ECB00939C37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93B03815E79ECB00939C37 /* CoreGraphics.framework */; };
@@ -43,6 +46,9 @@
 		BF5A022C15EB9A6B0068260B /* FirstViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController_iPhone.xib; sourceTree = "<group>"; };
 		BF5A022D15EB9A6B0068260B /* SecondViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController_iPad.xib; sourceTree = "<group>"; };
 		BF5A022E15EB9A6B0068260B /* SecondViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController_iPhone.xib; sourceTree = "<group>"; };
+		BF608E1D1601B27C0059FE7A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BF608E1E1601B27C0059FE7A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BF608E1F1601B27C0059FE7A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BF93B03015E79ECB00939C37 /* MocogaServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MocogaServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF93B03415E79ECB00939C37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BF93B03615E79ECB00939C37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -169,6 +175,9 @@
 		BFE8D7B015EB370F00B698D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BF608E1D1601B27C0059FE7A /* Default-568h@2x.png */,
+				BF608E1E1601B27C0059FE7A /* Default.png */,
+				BF608E1F1601B27C0059FE7A /* Default@2x.png */,
 				BF41918915ECD33C000E488F /* bg_gray.png */,
 				BFE8D7A815EB370B00B698D0 /* Icon-72.png */,
 				BFE8D7A915EB370B00B698D0 /* Icon-72@2x.png */,
@@ -242,6 +251,9 @@
 				BF5A023115EB9A6B0068260B /* SecondViewController_iPad.xib in Resources */,
 				BF5A023215EB9A6B0068260B /* SecondViewController_iPhone.xib in Resources */,
 				BF41918A15ECD33C000E488F /* bg_gray.png in Resources */,
+				BF608E201601B27C0059FE7A /* Default-568h@2x.png in Resources */,
+				BF608E211601B27C0059FE7A /* Default.png in Resources */,
+				BF608E221601B27C0059FE7A /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
