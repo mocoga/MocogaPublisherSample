@@ -17,7 +17,7 @@
  *
  * - Mocoga SDK 사용을 위한 헤더를 추가합니다.
  */
-#import <MocogaSDK/Mocoga.h>
+#import "Mocoga.h"
 
 @interface AppDelegate (GamePointMethods)
 - (NSUInteger)addPointFromClient:(NSUInteger)addedPoints;
