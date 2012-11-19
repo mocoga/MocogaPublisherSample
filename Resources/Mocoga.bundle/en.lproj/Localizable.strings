@@ -4,6 +4,7 @@
 "Title_RewardReceived"		= "You made it!";
 "Title_RewardError"			= "Fail to get reward";
 "Title_StopPlaying"			= "You really want to stop?";
+"Title_VideoCompleted"		= "You made it!"; /* non-reward */
 
 /* BTN */
 "Btn_Confirm"				= "Confirm";
@@ -17,8 +18,10 @@
 /* MSG */
 "Msg_VideoError"			= "An error occurred playing the video.\nTry again later.";
 "Msg_StopPlaying"			= "Watching %2$d more seconds,\nyou can get %1$@.";
+"Msg_StopPlaying4NoReward"	= "%d seconds to end"; /* non-reward */
 "Msg_NetworkError"			= "Fail to get an offer because of network error.\nWant to try again?";
 "Msg_RewardReceived_Prefix"	= "You have earned %@ %@.";
+"Msg_VideoCompleted_Prefix"	= "Thank you for watching video."; /* non-reward */
 "Msg_UnknownReward_Prefix"	= "Reward";
 "Msg_UnknownReward_Desc"	= "You have earned a reward.";
 "Msg_RewardError"			= "There was a problem processing a reward. Please Try again later.";
